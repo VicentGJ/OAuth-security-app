@@ -20,11 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'Your secret key here' # Can use this one for testing: 'z@nf00$+4%(m$mj#z-u#p@#p8t2i5&j3v)b!cbz&ts69$h6@2*'
+SECRET_KEY = 'z@nf00$+4%(m$mj#z-u#p@#p8t2i5&j3v)b!cbz&ts69$h6@2*' # Can use this one for testing: 'z@nf00$+4%(m$mj#z-u#p@#p8t2i5&j3v)b!cbz&ts69$h6@2*'
 
 # Oauth Config
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'Your key here'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'Your secret here'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '343296192968-n4isher3qkrd0cct97is9jenp5j59281.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '26fmB374xEpePe6TaLghE00e'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 LOGIN_URL = '/'

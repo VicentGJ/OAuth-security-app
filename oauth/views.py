@@ -16,14 +16,18 @@ def index(request):
 
         try:
             auth_user = Profile.objects.get(user__username=request.user)
+            auth_user.last_IP = client_ip
+            last_ip = auth_user.IPs.find(client_ip)
+            if last_ip == -1:
+                auth_user.IPs = auth_user.IPs + "," + client_ip
             auth_user.save()
         except:
             user = User.objects.get(username=request.user)
-            auth_user = Profile(user=user, ip=client_ip)
+            auth_user = Profile(user=user, last_IP=client_ip, IPs=client_ip)
             auth_user.save()
 
         context = {
-            'ip' : auth_user.ip
+            'ip' : client_ip
         }
         
     else:
